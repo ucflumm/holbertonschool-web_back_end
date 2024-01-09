@@ -1,3 +1,4 @@
 *.json
 *.pyc
 python_variable_annotations/0-main.py
+python_variable_annotations/2-main.py
