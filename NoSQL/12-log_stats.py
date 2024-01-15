@@ -15,14 +15,13 @@ Display:
 from pymongo import MongoClient
 
 
-def log_stats():
-    """ provides some stats about Nginx logs stored in MongoDB """
+if __name__ == "__main__":
     client = MongoClient('mongodb://localhost:27017')
     db = client.logs
     logs_collection = db.nginx
     total = logs_collection.count_documents({})
     print("{} logs".format(total))
-    
+
     print('Methods:')
     methods = ["GET", "POST", "PUT", "PATCH", "DELETE"]
     for method in methods:
