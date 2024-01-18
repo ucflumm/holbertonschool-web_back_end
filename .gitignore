@@ -4,3 +4,5 @@ python_variable_annotations/0-main.py
 python_variable_annotations/1-main.py
 python_variable_annotations/2-main.py
 ES6_basic/node_modules/*
+ES6_classes/node_modules/*
+node_modules
