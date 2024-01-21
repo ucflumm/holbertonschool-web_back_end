@@ -38,6 +38,8 @@ export default class Pricing {
     return `${this.amount} ${this.currency.displayFullCurrency()}`;
   }
 
+  // static because it is a helper function
+  // however take note of the return type
   static convertPrice(amount, conversionRate) {
     if (typeof amount !== "number") {
       throw TypeError("Amount must be a number");
