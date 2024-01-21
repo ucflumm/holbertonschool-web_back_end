@@ -3,11 +3,11 @@ import Currency from './3-currency.js';
 
 export default class Pricing {
   constructor(amount, currency) {
-    if (typeof amount !== "number") {
+    if (typeof amount !== 'number') {
       throw TypeError("Amount must be a number");
     }
     if (!(currency instanceof Currency)) {
-      throw TypeError("Currency must be a Currency");
+      throw TypeError('Currency must be a Currency');
     }
     this._amount = amount;
     this._currency = currency;
@@ -18,8 +18,8 @@ export default class Pricing {
   }
 
   set amount(value) {
-    if (typeof value !== "number") {
-      throw TypeError("Amount must be a number");
+    if (typeof value !== 'number') {
+      throw TypeError('Amount must be a number');
     }
     this._amount = value;
   }
@@ -30,7 +30,7 @@ export default class Pricing {
 
   set currency(value) {
     if (!(value instanceof Currency)) {
-      throw TypeError("Currency must be a Currency");
+      throw TypeError('Currency must be a Currency');
     }
     this._currency = value;
   }
@@ -42,11 +42,11 @@ export default class Pricing {
   // static because it is a helper function
   // however take note of the return type
   static convertPrice(amount, conversionRate) {
-    if (typeof amount !== "number") {
-      throw TypeError("Amount must be a number");
+    if (typeof amount !== 'number') {
+      throw TypeError('Amount must be a number');
     }
-    if (typeof conversionRate !== "number") {
-      throw TypeError("ConversionRate must be a number");
+    if (typeof conversionRate !== 'number') {
+      throw TypeError('ConversionRate must be a number');
     }
     return amount * conversionRate;
   }
